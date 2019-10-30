@@ -1,0 +1,28 @@
+{
+  "name": "name",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.es.js",
+  "targets": {
+    "main": {
+      "node": ">=8,x",
+      "browsers": [
+        "> 1%",
+        "not dead"
+      ]
+    }
+  },
+  "dependencies": {
+    "@types/react": "16.8.24",
+    "react": "16.11.0",
+    "typescript": "3.6.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.2.1"
+  }
+}
