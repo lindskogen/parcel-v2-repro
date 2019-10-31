@@ -1,12 +1,13 @@
-# parcel v2 crash repro
+# parcel v2 crash repro (yarn workspaces)
 
 ```bash
 yarn
 
-yarn parcel build src/index.ts
+# set up alias to locally cloned parcel project
+# with fix-ts-namespace-imports branch checked out
+parceldev build packages/*
+parceldev build packages/one
 # 💥
 ```
-
-Removing the `"types"` field from package.json makes it work?
 
 `¯\_(ツ)_/¯`
