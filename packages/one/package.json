@@ -1,0 +1,38 @@
+{
+  "name": "name",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.es.js",
+  "targets": {
+    "main": {
+      "node": ">=8,x",
+      "browsers": [
+        "> 1%",
+        "not dead"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "react-scripts-ts test --env=jsdom",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "clean": "rm -rf dist",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.8.19",
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "16.8.24",
+    "react": "16.11.0"
+  }
+}
