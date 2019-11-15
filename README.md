@@ -1,13 +1,12 @@
-# parcel v2 crash repro (yarn workspaces)
+# parcel v2 crash repro
 
 ```bash
 yarn
 
 # set up alias to locally cloned parcel project
-# with fix-ts-namespace-imports branch checked out
-parceldev build packages/*
-parceldev build packages/one
+# with v2 branch checked out (as of current writing: 4a3f5349157)
+parceldev build .
 # 💥
 ```
 
-`¯\_(ツ)_/¯`
+Named exports with same name (even if renamed in module) makes parcel crash
