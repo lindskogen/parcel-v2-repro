@@ -7,7 +7,7 @@ export interface Props {
   text: string;
 }
 
-export const Header: React.FC<Props> = () => (
+export const SeparatorLine: React.FC<Props> = () => (
   <h1>
     <FontAwesomeIcon icon={farCircle} />
     <FontAwesomeIcon icon={fasCircle} />
